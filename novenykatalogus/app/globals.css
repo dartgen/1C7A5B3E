@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #f9fafb;
+  --foreground: #1f2937;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111827;
+    --foreground: #f9fafb;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Small helper styles */
+.hero { 
+  background-image: linear-gradient(135deg, #e6f9ec 0%, #dff3e7 25%, #c8ead7 50%, #aee0bf 75%, #9ad9ab 100%);
+  background-position: center;
+  background-size: cover;
+}
+
+/* simple line-clamp fallback for descriptions */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Readability helpers */
+.readable { font-size: 1.05rem; line-height: 1.6; color: #334155; }
+.centered { display: flex; justify-content: center; align-items: center; }
+
+/* Ensure form controls are readable on the green hero background */
+input, textarea, select {
+  color: #0f172a; /* dark text */
+  background-color: #ffffff; /* keep inputs white */
+}
+
+/* placeholder color for inputs */
+::placeholder {
+  color: #475569; /* slate-600 */
+  opacity: 1;
+}
+
+/* when inputs are inside a dark/colored hero, ensure placeholder is visible */
+.hero input::placeholder {
+  color: #475569;
+}

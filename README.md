@@ -15,7 +15,7 @@ Egy egyszerű, háromoldalas Next.js alkalmazás, amely bemutat egy fiktív vár
     - Validáció alapokkal (client-side).
 
 ## Milyen programokat és nyelveket használok
-- Nyelvek: JavaScript vagy TypeScript
+- Nyelvek: TypeScript
 - Keretrendszer: Next.js
 - Stílusok: Tailwind CSS
 - Csomagkezelő: npm
